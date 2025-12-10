@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Of Mice and Men Study Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+            color: #2c3e50;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #7e8ba3;
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: linear-gradient(to right, #f8f9fa, #ffffff);
+            border-left: 5px solid #1e3c72;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #2a5298;
+            padding-bottom: 8px;
+        }
+        
+        h3 {
+            color: #2a5298;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .character-card {
+            background: white;
+            padding: 18px;
+            border-radius: 12px;
+            border: 2px solid #e0e0e0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(30, 60, 114, 0.2);
+        }
+        
+        .character-name {
+            font-weight: bold;
+            color: #1e3c72;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+        
+        .theme-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .theme-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .quote {
+            background: #fff8dc;
+            padding: 15px;
+            margin: 12px 0;
+            border-left: 4px solid #daa520;
+            border-radius: 8px;
+            font-style: italic;
+            color: #5a4a2a;
+        }
+        
+        .quote-text {
+            margin-bottom: 5px;
+        }
+        
+        .quote-context {
+            font-size: 0.9em;
+            color: #8b7355;
+            font-style: normal;
+        }
+        
+        .symbol-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .symbol-card {
+            background: linear-gradient(to bottom right, #ffeaa7, #fdcb6e);
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(253, 203, 110, 0.3);
+        }
+        
+        .symbol-name {
+            font-weight: bold;
+            color: #2d3436;
+            font-size: 1.15em;
+            margin-bottom: 8px;
+        }
+        
+        .literary-device {
+            background: #e8f5e9;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #4caf50;
+        }
+        
+        .device-name {
+            font-weight: bold;
+            color: #2e7d32;
+            font-size: 1.1em;
+        }
+        
+        .location-card {
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(252, 182, 159, 0.3);
+        }
+        
+        .location-name {
+            font-weight: bold;
+            color: #d35400;
+            font-size: 1.15em;
+            margin-bottom: 5px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+        
+        li {
+            margin: 6px 0;
+        }
+        
+        .highlight {
+            background: #fffacd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Of Mice and Men</h1>
+        <div class="subtitle">by John Steinbeck - Complete Study Guide</div>
+        
+        <div class="section">
+            <h2>👥 Main Characters</h2>
+            <div class="character-grid">
+                <div class="character-card">
+                    <div class="character-name">George Milton</div>
+                    <p><strong>Role:</strong> Lennie's caretaker and protector</p>
+                    <p><strong>Traits:</strong> Smart, protective, frustrated, responsible, cynical yet dreams of better life</p>
+                    <p><strong>Transformation:</strong> From hopeful dreamer to tragic realist who must destroy his own dream to save Lennie from worse fate</p>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-name">Lennie Small</div>
+                    <p><strong>Role:</strong> George's companion; mentally disabled</p>
+                    <p><strong>Traits:</strong> Physically strong, childlike, innocent, loves soft things, forgetful, dependent</p>
+                    <p><strong>Symbolism:</strong> Represents innocence destroyed by harsh reality; the impossible American Dream</p>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-name">Candy</div>
+                    <p><strong>Role:</strong> Old ranch hand with one hand</p>
+                    <p><strong>Significance:</strong> Fears uselessness; loses his old dog (foreshadows Lennie); invests in George and Lennie's dream</p>
+                    <p><strong>Represents:</strong> The fate of the aged and disabled in society</p>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-name">Curley's Wife</div>
+                    <p><strong>Role:</strong> Only woman on ranch (nameless)</p>
+                    <p><strong>Traits:</strong> Lonely, attention-seeking, unfulfilled dreams of stardom</p>
+                    <p><strong>Significance:</strong> Victim of sexism; her death triggers the tragedy. Represents broken dreams and isolation</p>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-name">Crooks</div>
+                    <p><strong>Role:</strong> Black stable hand, isolated by racism</p>
+                    <p><strong>Traits:</strong> Intelligent, bitter, lonely, proud, cynical</p>
+                    <p><strong>Represents:</strong> Racial segregation and discrimination; desperately lonely but protecting himself</p>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-name">Slim</div>
+                    <p><strong>Role:</strong> Respected mule driver; moral center</p>
+                    <p><strong>Traits:</strong> Wise, understanding, respected, compassionate</p>
+                    <p><strong>Significance:</strong> The only one who understands George's final act; represents ideal masculinity</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🎭 Major Themes</h2>
+            
+            <div class="theme-box">
+                <div class="theme-title">The American Dream</div>
+                <p>The unattainable dream of land ownership and independence. George and Lennie's dream of owning a farm represents hope but ultimately proves impossible. Steinbeck suggests the American Dream is an illusion for working-class people.</p>
+            </div>
+            
+            <div class="theme-box">
+                <div class="theme-title">Loneliness & Isolation</div>
+                <p>Every character is profoundly lonely: George and Lennie seek companionship in each other, Crooks is isolated by racism, Curley's wife by sexism, Candy by age and disability. The ranch represents a world where human connection is nearly impossible.</p>
+            </div>
+            
+            <div class="theme-box">
+                <div class="theme-title">Power & Powerlessness</div>
+                <p>Examines who has power (white men like Curley) versus the powerless (women, minorities, the disabled, the poor). The social hierarchy creates victims and perpetuates suffering.</p>
+            </div>
+            
+            <div class="theme-box">
+                <div class="theme-title">Friendship & Loyalty</div>
+                <p>George and Lennie's relationship is unique on the ranch. Their bond represents the human need for companionship, but also the burden of responsibility. George's final act is both ultimate loyalty and tragic betrayal.</p>
+            </div>
+            
+            <div class="theme-box">
+                <div class="theme-title">The Nature of Strength & Weakness</div>
+                <p>Lennie is physically strong but mentally weak; George is physically small but intelligent. True strength comes from compassion and understanding (Slim), not physical power or cruelty.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📍 Key Locations</h2>
+            
+            <div class="location-card">
+                <div class="location-name">The Riverbank (Salinas River)</div>
+                <p><strong>Symbolism:</strong> Eden/Paradise - natural, peaceful, represents freedom and the dream</p>
+                <p><strong>Significance:</strong> Opening and closing location; paradise before and after the fall</p>
+            </div>
+            
+            <div class="location-card">
+                <div class="location-name">The Bunkhouse</div>
+                <p><strong>Symbolism:</strong> Harsh reality of working life; temporary, impermanent</p>
+                <p><strong>Significance:</strong> Where dreams are discussed but reality dominates; represents transient life of ranch workers</p>
+            </div>
+            
+            <div class="location-card">
+                <div class="location-name">The Barn</div>
+                <p><strong>Symbolism:</strong> Death and destruction</p>
+                <p><strong>Significance:</strong> Where Lennie kills the puppy and Curley's wife; where dreams die</p>
+            </div>
+            
+            <div class="location-card">
+                <div class="location-name">Crooks' Room</div>
+                <p><strong>Symbolism:</strong> Segregation and exclusion</p>
+                <p><strong>Significance:</strong> Physical manifestation of racism; Crooks' only space but also his prison</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🌟 Key Symbols</h2>
+            
+            <div class="symbol-grid">
+                <div class="symbol-card">
+                    <div class="symbol-name">The Dream Farm</div>
+                    <p>Represents the American Dream, freedom, safety, and independence. Its impossibility symbolizes the false promises of American society.</p>
+                </div>
+                
+                <div class="symbol-card">
+                    <div class="symbol-name">Lennie's Mice/Soft Things</div>
+                    <p>Innocence and gentleness that inadvertently destroys. Lennie's love of soft things leads to death - foreshadows the tragic ending.</p>
+                </div>
+                
+                <div class="symbol-card">
+                    <div class="symbol-name">Candy's Dog</div>
+                    <p>Represents the fate of the old, weak, and useless. Its shooting foreshadows Lennie's death - mercy killing to prevent suffering.</p>
+                </div>
+                
+                <div class="symbol-card">
+                    <div class="symbol-name">The Rabbits</div>
+                    <p>Lennie's fixation; represents innocence, his simple dreams, and childlike nature. Also represents the unattainable future.</p>
+                </div>
+                
+                <div class="symbol-card">
+                    <div class="symbol-name">Lennie's Dead Puppy</div>
+                    <p>Foreshadows Curley's wife's death. Shows Lennie's inability to control his strength and the pattern of innocent destruction.</p>
+                </div>
+                
+                <div class="symbol-card">
+                    <div class="symbol-name">Curley's Glove</div>
+                    <p>Full of vaseline; represents Curley's insecurity about his masculinity and his possessive, crude relationship with his wife.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>✍️ Literary Devices & Elements</h2>
+            
+            <div class="literary-device">
+                <div class="device-name">Foreshadowing</div>
+                <p>The death of the mouse, the killing of Candy's dog, and the death of the puppy all foreshadow Lennie's death. The incident in Weed (touching the girl's dress) foreshadows the tragedy with Curley's wife.</p>
+            </div>
+            
+            <div class="literary-device">
+                <div class="device-name">Circular Structure</div>
+                <p>The novel begins and ends at the riverbank, creating a circular narrative that emphasizes the inevitability of the tragedy and the cyclical nature of the workers' lives.</p>
+            </div>
+            
+            <div class="literary-device">
+                <div class="device-name">Naturalism</div>
+                <p>Steinbeck uses naturalistic style - characters are victims of social and economic forces beyond their control. Environment and heredity determine fate.</p>
+            </div>
+            
+            <div class="literary-device">
+                <div class="device-name">Biblical Allusions</div>
+                <p>Garden of Eden imagery (riverbank), Cain and Abel parallels (George and Lennie), the fall from innocence. The title itself references Robert Burns' poem about destroyed dreams.</p>
+            </div>
+            
+            <div class="literary-device">
+                <div class="device-name">Animal Imagery</div>
+                <p>Lennie is repeatedly compared to animals (bear, horse, dog) - emphasizes his natural innocence but also his place in the predatory social hierarchy.</p>
+            </div>
+            
+            <div class="literary-device">
+                <div class="device-name">Dramatic Structure</div>
+                <p>Written like a play with distinct scenes, limited settings, and heavy dialogue. Each chapter is almost a separate act building to the climax.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>💬 Essential Power Quotes</h2>
+            
+            <div class="quote">
+                <div class="quote-text">"Guys like us, that work on ranches, are the loneliest guys in the world... With us it ain't like that. We got a future."</div>
+                <div class="quote-context">- George | Theme: Friendship vs. Loneliness</div>
+            </div>
+            
+            <div class="quote">
+                <div class="quote-text">"I got you to look after me, and you got me to look after you."</div>
+                <div class="quote-context">- Lennie | Theme: Mutual dependence and friendship</div>
+            </div>
+            
+            <div class="quote">
+                <div class="quote-text">"A guy needs somebody—to be near him... A guy goes nuts if he ain't got nobody."</div>
+                <div class="quote-context">- Crooks | Theme: Loneliness and human need for connection</div>
+            </div>
+            
+            <div class="quote">
+                <div class="quote-text">"I could get along so easy and so nice if I didn't have you on my tail."</div>
+                <div class="quote-context">- George | Theme: Burden of responsibility; shows George's frustration</div>
+            </div>
+            
+            <div class="quote">
+                <div class="quote-text">"I ought to of shot that dog myself, George. I shouldn't ought to of let no stranger shoot my dog."</div>
+                <div class="quote-context">- Candy | Foreshadows George shooting Lennie himself</div>
+            </div>
+            
+            <div class="quote">
+                <div class="quote-text">"Maybe ever'body in the whole damn world is scared of each other."</div>
+                <div class="quote-context">- Slim | Theme: Universal fear and isolation</div>
+            </div>
+            
+            <div class="quote">
+                <div class="quote-text">"I seen hundreds of men come by on the road... every damn one of 'em's got a little piece of land in his head. An' never a God damn one of 'em ever gets it."</div>
+                <div class="quote-context">- Crooks | Theme: Impossibility of the American Dream</div>
+            </div>
+            
+            <div class="quote">
+                <div class="quote-text">"Tell me about the rabbits, George."</div>
+                <div class="quote-context">- Lennie | Repeated motif; represents his innocent dream and childlike nature</div>
+            </div>
+            
+            <div class="quote">
+                <div class="quote-text">"You hadda, George. I swear you hadda."</div>
+                <div class="quote-context">- Slim | Final line; validates George's mercy killing</div>
+            </div>
+            
+            <div class="quote">
+                <div class="quote-text">"Nobody never gets to heaven, and nobody gets no land."</div>
+                <div class="quote-context">- Crooks | Theme: Shattered dreams and cynicism born from experience</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🔍 Hidden Meanings & Deep Analysis</h2>
+            
+            <h3>The Title's Significance</h3>
+            <p>From Robert Burns' poem "To a Mouse": <em>"The best laid schemes o' mice an' men / Gang aft agley"</em> (Often go awry). Suggests that no matter how carefully one plans, things can still go wrong. The mouse in the poem had its home destroyed by a plow - like how Lennie and George's dreams are destroyed.</p>
+            
+            <h3>Color Symbolism</h3>
+            <ul>
+                <li><span class="highlight">Green</span> - Hope and renewal (riverbank description)</li>
+                <li><span class="highlight">Red</span> - Danger (Curley's wife's clothing, nails)</li>
+                <li><span class="highlight">White/Light</span> - Innocence and vulnerability</li>
+            </ul>
+            
+            <h3>Names as Symbolism</h3>
+            <ul>
+                <li><strong>Lennie Small</strong> - Ironic; he's large and his intellect is "small"</li>
+                <li><strong>Curley's Wife</strong> - No name; shows how women were viewed as property</li>
+                <li><strong>Candy</strong> - Sweet but ultimately disposable</li>
+            </ul>
+            
+            <h3>The Final Scene Parallels</h3>
+            <p>George shoots Lennie at the same spot where they started, while telling him the dream story. This mirrors how Candy's dog was shot - a mercy killing. George takes responsibility for Lennie rather than letting the mob do it, showing love through a terrible act. It's both murder and mercy.</p>
+            
+            <h3>Social Commentary</h3>
+            <p>Steinbeck critiques 1930s American society: economic inequality, racism, sexism, ableism, and the myth of the self-made man. The Great Depression destroyed millions of dreams, and Steinbeck shows how the American Dream is accessible only to the privileged.</p>
+        </div>
+        
+        <div class="section">
+            <h2>📝 Character Transformations</h2>
+            
+            <h3>George Milton</h3>
+            <p><strong>Beginning:</strong> Frustrated caretaker who dreams of freedom and the farm</p>
+            <p><strong>Middle:</strong> Begins to hope the dream could be real when Candy offers money</p>
+            <p><strong>End:</strong> Forced to kill his dream (literally and figuratively) by shooting Lennie. Becomes like every other lonely ranch hand.</p>
+            
+            <h3>Candy</h3>
+            <p><strong>Beginning:</strong> Resigned to being useless and discarded</p>
+            <p><strong>Middle:</strong> Finds hope and purpose in the farm dream</p>
+            <p><strong>End:</strong> Returns to hopelessness and bitterness after Curley's wife's death</p>
+            
+            <h3>Crooks</h3>
+            <p><strong>Beginning:</strong> Isolated, cynical, protective of his space</p>
+            <p><strong>Middle:</strong> Briefly allows himself to hope and dream of joining the farm</p>
+            <p><strong>End:</strong> Retreats back into cynicism when reminded of his place in society</p>
+            
+            <h3>Curley's Wife</h3>
+            <p><strong>Throughout:</strong> Desperately lonely, seeking attention and validation</p>
+            <p><strong>Revelation:</strong> Her conversation with Lennie reveals her broken dreams of Hollywood stardom</p>
+            <p><strong>Death:</strong> In death, she appears peaceful - finally free from her unhappy marriage</p>
+        </div>
+        
+        <div class="section" style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; border-left: 5px solid gold;">
+            <h2 style="color: white; border-bottom: 2px solid white;">🎯 Key Exam Points to Remember</h2>
+            <ul style="font-size: 1.05em; line-height: 1.8;">
+                <li>The novel is a <strong>tragedy</strong> - the ending is inevitable from the start</li>
+                <li><strong>Everyone is lonely</strong> - isolation is the universal condition</li>
+                <li>The American Dream is presented as <strong>unattainable</strong> for the working class</li>
+                <li>Steinbeck uses <strong>naturalism</strong> - characters can't escape their fates</li>
+                <li>The ending is both <strong>tragic and merciful</strong> - George saves Lennie from worse</li>
+                <li>Settings mirror the plot: <strong>Eden → fallen world → back to Eden for death</strong></li>
+                <li><strong>All weak characters are destroyed</strong> - the strong exploit the vulnerable</li>
+                <li>The novel critiques social hierarchies: <strong>racism, sexism, ableism, classism</strong></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

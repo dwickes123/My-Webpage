@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Of Mice and Men Study Guide</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Georgia', serif;
@@ -18,10 +14,8 @@
             padding: 20px;
             line-height: 1.6;
         }
-        
-        a {
-            text-decoration: none;
-        }
+
+        a { text-decoration: none; }
 
         .back-home {
             color: #a855f7;
@@ -162,9 +156,7 @@
             color: #5a4a2a;
         }
         
-        .quote-text {
-            margin-bottom: 5px;
-        }
+        .quote-text { margin-bottom: 5px; }
         
         .quote-context {
             font-size: 0.9em;
@@ -222,14 +214,8 @@
             margin-bottom: 5px;
         }
         
-        ul {
-            margin-left: 20px;
-            margin-top: 8px;
-        }
-        
-        li {
-            margin: 6px 0;
-        }
+        ul { margin-left: 20px; margin-top: 8px; }
+        li { margin: 6px 0; }
         
         .highlight {
             background: #fffacd;
@@ -237,26 +223,54 @@
             border-radius: 3px;
             font-weight: bold;
         }
-        
+
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+            margin-top: 10px;
+        }
+
+        .vocab-card {
+            background: #f4f7fb;
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 4px solid #1e3c72;
+        }
+
+        .vocab-card h4 {
+            margin-bottom: 8px;
+            color: #1e3c72;
+        }
+
+        .chapter-accordion summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1e3c72;
+            margin: 6px 0;
+        }
+
+        .chapter-accordion {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border-left: 3px solid #2a5298;
+        }
+
+        .chapter-accordion p {
+            margin-top: 6px;
+            margin-bottom: 4px;
+        }
+
         @media print {
-            body {
-                background: white;
-            }
-            .container {
-                box-shadow: none;
-            }
-            .nav-buttons {
-                display: none;
-            }
-            .back-home {
-                display: none;
-            }
+            body { background: white; }
+            .container { box-shadow: none; }
+            .nav-buttons, .back-home { display: none; }
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 25px;
-            }
+            .container { padding: 25px; }
         }
     </style>
 </head>
@@ -277,6 +291,8 @@
             <a class="nav-button" href="#quotes">💬 Power Quotes</a>
             <a class="nav-button" href="#analysis">🔍 Deep Analysis</a>
             <a class="nav-button" href="#transformations">🧠 Transformations</a>
+            <a class="nav-button" href="#vocab">📖 Key Vocabulary</a>
+            <a class="nav-button" href="#chapters">📚 Chapter Guide</a>
             <a class="nav-button" href="#exam-points">🎯 Exam Points</a>
         </div>
         
@@ -465,22 +481,22 @@
             
             <div class="quote">
                 <div class="quote-text">"Guys like us, that work on ranches, are the loneliest guys in the world... With us it ain't like that. We got a future."</div>
-                <div class="quote-context">– George | Theme: Friendship vs. loneliness; the dream that separates them from others.</div>
+                <div class="quote-context">– George | Theme: friendship vs. loneliness; the dream that separates them from others.</div>
             </div>
             
             <div class="quote">
                 <div class="quote-text">"I got you to look after me, and you got me to look after you."</div>
-                <div class="quote-context">– Lennie | Theme: Mutual dependence and friendship.</div>
+                <div class="quote-context">– Lennie | Theme: mutual dependence and friendship.</div>
             </div>
             
             <div class="quote">
                 <div class="quote-text">"A guy needs somebody—to be near him... A guy goes nuts if he ain't got nobody."</div>
-                <div class="quote-context">– Crooks | Theme: Loneliness and the human need for connection.</div>
+                <div class="quote-context">– Crooks | Theme: loneliness and the human need for connection.</div>
             </div>
             
             <div class="quote">
                 <div class="quote-text">"I could get along so easy and so nice if I didn't have you on my tail."</div>
-                <div class="quote-context">– George | Theme: Burden of responsibility; shows George's frustration and love.</div>
+                <div class="quote-context">– George | Theme: burden of responsibility; shows frustration and love.</div>
             </div>
             
             <div class="quote">
@@ -490,7 +506,7 @@
             
             <div class="quote">
                 <div class="quote-text">"Maybe ever'body in the whole damn world is scared of each other."</div>
-                <div class="quote-context">– Slim | Theme: Universal fear and isolation.</div>
+                <div class="quote-context">– Slim | Theme: universal fear and isolation.</div>
             </div>
             
             <div class="quote">
